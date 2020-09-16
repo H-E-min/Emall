@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>E宠商城</title>
     <link rel="stylesheet" href="./dist/css/public.min.css">
     <link rel="stylesheet" href="./dist/css/index.min.css">
+    <script src="./dist/js/jquery-1.12.4.min.js"></script>
+    <script src="./dist/js/address-picker.min.js"></script>
     <script src="./dist/js/slide.min.js"></script>
+    <!-- <script src="./dist/js/index.min.js"></script> -->
+   
 </head>
+
 <body>
     <!-- top -->
     <div id="top">
-        <div  id="toper" class="type_area">
+        <div id="toper" class="type_area">
             <a href="https://www.epet.com/" id="first_a">E宠首页</a>
-            <p> 送至：</p>
+            <div> 
+                送至：
+                <span id="test" style="cursor:pointer;">选择地址</span>
+                <div class="triangle"></div>
+            </div>
             <a href="https://www.epet.com/zhengpin/main.html?do=newgoods">E宠就是正品</a>
             <ul>
                 <li><a href="" class="red">问题反馈</a></li>
@@ -31,12 +41,12 @@
                     <a href="">我的E宠</a>
                     <b></b>
                 </li>
-            <li><span></span>
-                <a href="">购物车(0)</a>
-            </li>
-            <li><a href="">[注册]</a></li>
-            <li><a href="">[登录]</a></li>
-        </ul>
+                <li><span></span>
+                    <a href="">购物车(0)</a>
+                </li>
+                <li><a href="">[注册]</a></li>
+                <li><a href="">[登录]</a></li>
+            </ul>
         </div>
     </div>
     <!-- header -->
@@ -57,79 +67,80 @@
         <div id="cart_icon">购物车(0)</div>
     </div>
     <!-- navigate -->
-        <div id="navigate" class="type_area">
-            <div class="left">
-                <a href="" id="cat">猫猫<b></b></a>
-                <a href="">商品分类<b></b></a>
-            </div>
-            <ul>
-                <li>
-                    <b></b>
-                    <a href="">品牌特卖</a>
-                </li>
-                <li>
-                    <b></b>
-                    <a href="">潮品视频</a>
-                </li>
-                <li>
-                    <b></b>
-                    <a href="">小剧场</a>
-                </li>
-                <li>
-                    <b></b>
-                    <a href="">E宠课堂</a>
-                </li>
-                <li>
-                    <b></b>
-                    <a href="">萌爪联盟</a>
-                </li>
-                <li>
-                    <b></b>
-                    <a href="">清仓特价</a>
-                </li>
-            </ul>
+    <div id="navigate" class="type_area">
+        <div class="left">
+            <a href="" id="cat">猫猫<b></b></a>
+            <a href="">商品分类<b></b>
+            </a>
         </div>
-        <!-- slide -->
-        <div id="slide">
-            <div class="all" id='all'>
-                <div class="screen">
-                    <ul>
-                        <li><img src="./dist/img/7b7f912612a1e494cab8c3140c1c83a7.jpg"></li>
-                        <li><img src="./dist/img/47d1d2b026babe75afd59d0be178ba52.jpg"></li>
-                        <li><img src="./dist/img/bbcff8aa58866b3c0189ccac0461e5a8.jpg"></li>
-                        <li><img src="./dist/img/ec6bd81af61bf2df94ccb284a5e2912d.jpg"></li>
-                        <li><img src="./dist/img/f2904fa66b12cbcabc297cd595094fa5.jpg"></li>
-                        <li><img src="./dist/img/dac95793b4c3e00e06577b6448333124.jpg"></li>
-                    </ul>
-                </div>
-                <ol>
-                </ol>
-            </div>
-            <div class="pet-left">
-                <p class="fir_p">
-                    <a href=""></a>
-                    <span class="red_text">7916</span>种精选宝贝
-                    <a href="" class="gray_text">正在狗狗站溜达</a>
-                </p>
-                <p class="sec_p">
-                    <a href=""></a>
-                    <span class="red_text">4282</span>种精选宝贝
-                    <a href="" class="gray_text">切换到猫站</a>
-                </p>
-            </div>
-            <div class="pet-right">
-                <p>
-                    <img src="./dist/img/2c32efd80570f5a01ba64f66ceefb46e.jpg" alt="">
-                </p>
-                <p>
-                    <img src="./dist/img/adb9b978acbbe000e3f2cf14042c4fd4.jpg" alt="">
-                </p>
-                <p>
-                    <img src="./dist/img/5cf45f42f02dae75cf4d8ae767784b05.png" alt="">
-                </p>
-            </div>
+        <ul>
+            <li>
+                <b></b>
+                <a href="">品牌特卖</a>
+            </li>
+            <li>
+                <b></b>
+                <a href="">潮品视频</a>
+            </li>
+            <li>
+                <b></b>
+                <a href="">小剧场</a>
+            </li>
+            <li>
+                <b></b>
+                <a href="">E宠课堂</a>
+            </li>
+            <li>
+                <b></b>
+                <a href="">萌爪联盟</a>
+            </li>
+            <li>
+                <b></b>
+                <a href="">清仓特价</a>
+            </li>
+        </ul>
     </div>
-<!-- module -->
+    <!-- slide -->
+    <div id="slide">
+        <div class="all" id='all'>
+            <div class="screen">
+                <ul>
+                    <li><img src="./dist/img/7b7f912612a1e494cab8c3140c1c83a7.jpg"></li>
+                    <li><img src="./dist/img/47d1d2b026babe75afd59d0be178ba52.jpg"></li>
+                    <li><img src="./dist/img/bbcff8aa58866b3c0189ccac0461e5a8.jpg"></li>
+                    <li><img src="./dist/img/ec6bd81af61bf2df94ccb284a5e2912d.jpg"></li>
+                    <li><img src="./dist/img/f2904fa66b12cbcabc297cd595094fa5.jpg"></li>
+                    <li><img src="./dist/img/dac95793b4c3e00e06577b6448333124.jpg"></li>
+                </ul>
+            </div>
+            <ol>
+            </ol>
+        </div>
+        <div class="pet-left">
+            <p class="fir_p">
+                <a href=""></a>
+                <span class="red_text">7916</span>种精选宝贝
+                <a href="" class="gray_text">正在狗狗站溜达</a>
+            </p>
+            <p class="sec_p">
+                <a href=""></a>
+                <span class="red_text">4282</span>种精选宝贝
+                <a href="" class="gray_text">切换到猫站</a>
+            </p>
+        </div>
+        <div class="pet-right">
+            <p>
+                <img src="./dist/img/2c32efd80570f5a01ba64f66ceefb46e.jpg" alt="">
+            </p>
+            <p>
+                <img src="./dist/img/adb9b978acbbe000e3f2cf14042c4fd4.jpg" alt="">
+            </p>
+            <p>
+                <img src="./dist/img/5cf45f42f02dae75cf4d8ae767784b05.png" alt="">
+            </p>
+        </div>
+    </div>
+    <!-- module -->
     <div class="type_area" id="cat_food">
         <div class="food_title">
             <p>猫咪主粮</p>
@@ -161,7 +172,7 @@
             </div>
             <div class="hot_right">
                 <div>
-                    <p class="shark">小青鲨</p> 
+                    <p class="shark">小青鲨</p>
                     <p class="fish">N种鱼 不如一碗鲨</p>
                 </div>
                 <div>
@@ -201,7 +212,7 @@
             <li><a href=""><img src="./dist/img/purchase_suppliers_file_1536301115.png" alt=""></a></li>
         </ul>
     </div>
-<!-- module2 -->
+    <!-- module2 -->
     <div class="type_area" id="cat_food">
         <div class="food_title">
             <p>猫咪零食</p>
@@ -234,7 +245,7 @@
             </div>
             <div class="hot_right">
                 <div>
-                    <p class="shark">美国卡比</p> 
+                    <p class="shark">美国卡比</p>
                     <p class="fish">真·无谷天然 低敏易消化</p>
                 </div>
                 <div>
@@ -274,153 +285,305 @@
             <li><a href=""><img src="./dist/img/purchase_suppliers_file_1536301115.png" alt=""></a></li>
         </ul>
     </div>
-<!-- module3 -->
+    <!-- module3 -->
     <div class="type_area" id="cat_food">
-    <div class="food_title">
-        <p>猫咪保健&医疗</p>
+        <div class="food_title">
+            <p>猫咪保健&医疗</p>
+            <ul>
+                <li>热门</li>
+                <li>罐头湿粮</li>
+                <li>美味零食</li>
+                <li>猫草薄荷</li>
+                <li>肉制零食</li>
+            </ul>
+        </div>
+        <div class="food_content">
+            <div class="hot_food">
+                <div class="hot">
+                    <span>——————&nbsp;&nbsp;</span>
+                    <b>最热HOT</b>
+                    <span>&nbsp;&nbsp;——————</span>
+                    <ul>
+                        <li><a href="">希宝</a></li>
+                        <li><a href="">梦吉猫罐</a></li>
+                        <li><a href="">爱普士猫罐</a></li>
+                        <li><a href="">爱丽思猫罐</a></li>
+                        <li><a href="">纽萃宝猫罐</a></li>
+                        <li><a href="">卡比猫罐</a></li>
+                        <li><a href="">雷米高</a></li>
+                        <li><a href="">K9Natural</a></li>
+                        <li><a href="">柏可心鱼干</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hot_right">
+                <div>
+                    <p class="shark">美国卡比</p>
+                    <p class="fish">真·无谷天然 低敏易消化</p>
+                </div>
+                <div>
+                    <div>
+                        <p>营养湿粮</p>
+                        <p>补水享美味</p>
+                    </div>
+                    <div>
+                        <p>美国TikiCat</p>
+                        <p>大肉块主食罐</p>
+                    </div>
+                </div>
+                <div class="ht_bottom">
+                    <div>
+                        <p>必备猫草</p>
+                        <p>无土种植 干净便捷</p>
+                    </div>
+                    <div>
+                        <p>希宝sheba</p>
+                        <p>真鱼真肉块鲜封包</p>
+                    </div>
+                    <div>
+                        <p>爱普士Applaws</p>
+                        <p>真肉看得见</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <ul>
-            <li>热门</li>
-            <li>罐头湿粮</li>
-            <li>美味零食</li>
-            <li>猫草薄荷</li>
-            <li>肉制零食</li>
+            <li><a href=""><img src="./dist/img/dcdd9aa566992eae9360447c5da128c5.jpg" alt=""></a></li>
+            <li><a href=""><img src="./dist/img/upload_file_1547015305.jpg" alt=""></a></li>
+            <li><a href=""><img src="./dist/img/upload_file_1562131788.jpg" alt=""></a></li>
+            <li><a href=""><img src="./dist/img/upload_file_1545041192.jpg" alt=""></a></li>
+            <li><a href=""><img src="./dist/img/upload_file_1547004718.jpg" alt=""></a></li>
+            <li><a href=""><img src="./dist/img/d6b2233aeec1529b8847fe22075762e8.jpg" alt=""></a></li>
+            <li><a href=""><img src="./dist/img/64ac5fd97740cb0fab0cfe3eac1d27f7.jpg" alt=""></a></li>
+            <li><a href=""><img src="./dist/img/purchase_suppliers_file_1536301115.png" alt=""></a></li>
         </ul>
     </div>
-    <div class="food_content">
-        <div class="hot_food">
-            <div class="hot">
-                <span>——————&nbsp;&nbsp;</span>
-                <b>最热HOT</b>
-                <span>&nbsp;&nbsp;——————</span>
+    <!-- module4 -->
+    <div class="type_area" id="cat_food">
+        <div class="food_title">
+            <p>猫咪牵引&服饰&玩具</p>
+            <ul>
+                <li>热门</li>
+                <li>罐头湿粮</li>
+                <li>美味零食</li>
+                <li>猫草薄荷</li>
+                <li>肉制零食</li>
+            </ul>
+        </div>
+        <div class="food_content">
+            <div class="hot_food">
+                <div class="hot">
+                    <span>——————&nbsp;&nbsp;</span>
+                    <b>最热HOT</b>
+                    <span>&nbsp;&nbsp;——————</span>
+                    <ul>
+                        <li><a href="">外出旅行包</a></li>
+                        <li><a href="">伊丽</a></li>
+                        <li><a href="">磨爪休闲</a></li>
+                        <li><a href="">休闲千羽</a></li>
+                        <li><a href="">定位配饰</a></li>
+                        <li><a href="">便携碗</a></li>
+                        <li><a href="">USB发光项圈</a></li>
+                        <li><a href="">时尚领结</a></li>
+                        <li><a href="">甜美连衣裙</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hot_right">
+                <div>
+                    <p class="shark">俏尾巴</p>
+                    <p class="fish">厚实耐抓不伤猫爪</p>
+                </div>
+                <div>
+                    <div>
+                        <p>田田猫</p>
+                        <p>开启智慧之门</p>
+                    </div>
+                    <div>
+                        <p>美国进口Worldwise</p>
+                        <p>百款高端喵星玩具</p>
+                    </div>
+                </div>
+                <div class="ht_bottom">
+                    <div>
+                        <p>AICC</p>
+                        <p>木质猫爬架</p>
+                    </div>
+                    <div>
+                        <p>网红猫玩具</p>
+                        <p>仙女系逗猫杆</p>
+                    </div>
+                    <div>
+                        <p>吃喝·玩乐·住行</p>
+                        <p>petsafe 一站式宠服务</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul>
+            <li><a href=""><img src="./dist/img/dcdd9aa566992eae9360447c5da128c5.jpg" alt=""></a></li>
+            <li><a href=""><img src="./dist/img/upload_file_1547015305.jpg" alt=""></a></li>
+            <li><a href=""><img src="./dist/img/upload_file_1562131788.jpg" alt=""></a></li>
+            <li><a href=""><img src="./dist/img/upload_file_1545041192.jpg" alt=""></a></li>
+            <li><a href=""><img src="./dist/img/upload_file_1547004718.jpg" alt=""></a></li>
+            <li><a href=""><img src="./dist/img/d6b2233aeec1529b8847fe22075762e8.jpg" alt=""></a></li>
+            <li><a href=""><img src="./dist/img/64ac5fd97740cb0fab0cfe3eac1d27f7.jpg" alt=""></a></li>
+            <li><a href=""><img src="./dist/img/purchase_suppliers_file_1536301115.png" alt=""></a></li>
+        </ul>
+    </div>
+    <!-- footer -->
+    <div id="footer">
+        <div class="type_area">
+            <div class="footer_top">
                 <ul>
-                    <li><a href="">希宝</a></li>
-                    <li><a href="">梦吉猫罐</a></li>
-                    <li><a href="">爱普士猫罐</a></li>
-                    <li><a href="">爱丽思猫罐</a></li>
-                    <li><a href="">纽萃宝猫罐</a></li>
-                    <li><a href="">卡比猫罐</a></li>
-                    <li><a href="">雷米高</a></li>
-                    <li><a href="">K9Natural</a></li>
-                    <li><a href="">柏可心鱼干</a></li>
+                    <li><a href="">正品保障</a></li>
+                    <li><a href="">品类丰富</a></li>
+                    <li><a href="">优质服务</a></li>
+                    <li><a href="">科学养宠</a></li>
+                    <li><a href="">E宠公益</a></li>
+                    <li><a href="">十年同心</a></li>
                 </ul>
             </div>
         </div>
-        <div class="hot_right">
-            <div>
-                <p class="shark">美国卡比</p> 
-                <p class="fish">真·无谷天然 低敏易消化</p>
-            </div>
-            <div>
+        <div class="footer_bottom">
+            <div id="foot_bottom_top" class="type_area">
                 <div>
-                    <p>营养湿粮</p>
-                    <p>补水享美味</p>
+                    <img src="./dist/img/cat_phone.gif" alt="">
+                    <p>售后电话</p>
+                    <p>4008889200 <b>「免长途费」</b></p>
+                    <p>023-68851700</p>
+                    <p>服务时间：09:00--18:30（周一到周日）</p>
                 </div>
-                <div>
-                    <p>美国TikiCat</p>
-                    <p>大肉块主食罐</p>
-                </div>
-            </div>
-            <div class="ht_bottom">
-                <div>
-                    <p>必备猫草</p>
-                    <p>无土种植 干净便捷</p>
-                </div>
-                <div>
-                    <p>希宝sheba</p>
-                    <p>真鱼真肉块鲜封包</p>
-                </div>
-                <div>
-                    <p>爱普士Applaws</p>
-                    <p>真肉看得见</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <ul>
-        <li><a href=""><img src="./dist/img/dcdd9aa566992eae9360447c5da128c5.jpg" alt=""></a></li>
-        <li><a href=""><img src="./dist/img/upload_file_1547015305.jpg" alt=""></a></li>
-        <li><a href=""><img src="./dist/img/upload_file_1562131788.jpg" alt=""></a></li>
-        <li><a href=""><img src="./dist/img/upload_file_1545041192.jpg" alt=""></a></li>
-        <li><a href=""><img src="./dist/img/upload_file_1547004718.jpg" alt=""></a></li>
-        <li><a href=""><img src="./dist/img/d6b2233aeec1529b8847fe22075762e8.jpg" alt=""></a></li>
-        <li><a href=""><img src="./dist/img/64ac5fd97740cb0fab0cfe3eac1d27f7.jpg" alt=""></a></li>
-        <li><a href=""><img src="./dist/img/purchase_suppliers_file_1536301115.png" alt=""></a></li>
-    </ul>
-    </div>
-<!-- module4 -->
-    <div class="type_area" id="cat_food">
-    <div class="food_title">
-        <p>猫咪牵引&服饰&玩具</p>
-        <ul>
-            <li>热门</li>
-            <li>罐头湿粮</li>
-            <li>美味零食</li>
-            <li>猫草薄荷</li>
-            <li>肉制零食</li>
-        </ul>
-    </div>
-    <div class="food_content">
-        <div class="hot_food">
-            <div class="hot">
-                <span>——————&nbsp;&nbsp;</span>
-                <b>最热HOT</b>
-                <span>&nbsp;&nbsp;——————</span>
                 <ul>
-                    <li><a href="">外出旅行包</a></li>
-                    <li><a href="">伊丽</a></li>
-                    <li><a href="">磨爪休闲</a></li>
-                    <li><a href="">休闲千羽</a></li>
-                    <li><a href="">定位配饰</a></li>
-                    <li><a href="">便携碗</a></li>
-                    <li><a href="">USB发光项圈</a></li>
-                    <li><a href="">时尚领结</a></li>
-                    <li><a href="">甜美连衣裙</a></li>
+                    <li>购物指南</li>
+                    <li><a href="">新人优惠</a></li>
+                    <li><a href="">购物问题</a></li>
+                    <li><a href="">支付问题 </a></li>
+                </ul>
+                <ul>
+                    <li>售后服务</li>
+                    <li><a href="">退换货政策</a></li>
+                    <li><a href="">退款说明</a></li>
+                    <li><a href="">售后问题 </a></li>
+                </ul>
+                <div class="load">
+                    <p>
+                        扫描下载APP <br>
+                        下单更优惠
+                    </p>
+                    <a href=""><img src="./dist/img/dw2.png" alt=""></a>
+                </div>
+                <div class="scan">
+                    <p>
+                        扫描关注E宠 <br>
+                        商城微信
+                    </p>
+                    <a href=""><img src="./dist/img/app-code.jpg" alt=""></a>
+                </div>
+            </div>
+            <div id="foot_bootom_bottom" class="type_area">
+                <ul>
+                    <li><a href="">关于我们</a></li>
+                    <li><a href=""><img src="./dist/img/weibo_logo.png" alt=""> E宠商城</a></li>
+                    <li><a href=""><img src="./dist/img/weixin_logo.png" alt=""> E宠商城</a></li>
+                    <li><a href=""><img src="./dist/img/baidu_log.png" alt="">E宠商城百家号 </a></li>
+                    <li><a href=""><img src="./dist/img/toutiao_logo.png" alt=""> E宠说</a></li>
+                    <li><a href="">E宠公益</a></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">公司地址</a></li>
+                    <li><a href="">应急响应</a></li>
+                    <li><a href="">仓储中心</a></li>
+                    <li><a href="">用户协议</a></li>
+                </ul>
+                <ul>
+                    <li><a href=""><img src="./dist/img/12315.png" alt=""></a></li>
+                    <li><a href=""><img src="./dist/img/360.png" alt=""></a></li>
+                    <li><a href=""><img src="./dist/img/chengxin.png" alt=""></a></li>
+                    <li><a href=""><img src="./dist/img/shiming.png" alt=""></a></li>
+                    <li><a href=""><img src="./dist/img/tx.png" alt=""></a></li>
+                    <li><a href=""><img src="./dist/img/jybz.png" alt=""></a></li>
+                    <li><a href=""><img src="./dist/img/cqgs.png" alt=""></a></li>
+                    <li><img src="./dist/img/baiq.png" alt=""></li>
+                    <li><img src="./dist/img/wsls.png" alt=""></li>
+                    <li><img src="./dist/img/sfqy.png" alt=""></li>
+                    <li><img src="./dist/img/yxqy.png" alt=""></li>
+                    <li><img src="./dist/img/bhdw.png" alt=""></li>
+                    <li><img src="./dist/img/sjws.png" alt=""></li>
+                </ul>
+                <ul>
+                    <li><a href="">渝ICP备10002905号-1</a></li>
+                    <li><a href="">渝ICP备10002905号-3</a></li>
+                    <li><a href="">营业执照</a></li>
+                    <li><a href="">兽药经营许可证</a></li>
+                    <li>增值电信业务经营许可证：渝B2-20140042 Copyright © 2007-2020 epet.com 重庆易宠科技有限公司</li>
                 </ul>
             </div>
         </div>
-        <div class="hot_right">
-            <div>
-                <p class="shark">俏尾巴</p> 
-                <p class="fish">厚实耐抓不伤猫爪</p>
-            </div>
-            <div>
-                <div>
-                    <p>田田猫</p>
-                    <p>开启智慧之门</p>
-                </div>
-                <div>
-                    <p>美国进口Worldwise</p>
-                    <p>百款高端喵星玩具</p>
-                </div>
-            </div>
-            <div class="ht_bottom">
-                <div>
-                    <p>AICC</p>
-                    <p>木质猫爬架</p>
-                </div>
-                <div>
-                    <p>网红猫玩具</p>
-                    <p>仙女系逗猫杆</p>
-                </div>
-                <div>
-                    <p>吃喝·玩乐·住行</p>
-                    <p>petsafe 一站式宠服务</p>
-                </div>
-            </div>
-        </div>
     </div>
-    <ul>
-        <li><a href=""><img src="./dist/img/dcdd9aa566992eae9360447c5da128c5.jpg" alt=""></a></li>
-        <li><a href=""><img src="./dist/img/upload_file_1547015305.jpg" alt=""></a></li>
-        <li><a href=""><img src="./dist/img/upload_file_1562131788.jpg" alt=""></a></li>
-        <li><a href=""><img src="./dist/img/upload_file_1545041192.jpg" alt=""></a></li>
-        <li><a href=""><img src="./dist/img/upload_file_1547004718.jpg" alt=""></a></li>
-        <li><a href=""><img src="./dist/img/d6b2233aeec1529b8847fe22075762e8.jpg" alt=""></a></li>
-        <li><a href=""><img src="./dist/img/64ac5fd97740cb0fab0cfe3eac1d27f7.jpg" alt=""></a></li>
-        <li><a href=""><img src="./dist/img/purchase_suppliers_file_1536301115.png" alt=""></a></li>
-    </ul>
+    <!-- sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li>
+                <a href=""></a>
+                <div class="cat">您还没有登录，请<a href="">登录</a></div>
+            </li>
+            <li>
+                <span></span>
+                <a href="">购物车</a>
+                <b>0</b>
+                <div class="cart">您还没有登录，请先登录</div>
+            </li>
+            <li>
+                <span></span>
+                <a href="">在线客服</a>
+                <b>0</b>
+            </li>
+            <li>
+                <div class="menu">您还没有登录，请先登录</div>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
-<!-- footer -->
 
+
+    <!-- login -->
+    <div id="shade">
+        <div id="login">
+           <div id="login_box">
+                 <div id="login_content">
+                    <div id="login_title">
+                        <a href="">手机验证码登录</a>
+                        <span>|</span>
+                        <a href="">账户登录</a>
+                    </div>
+                    <div id="user_pwd">
+                        <div id="user">
+                           <span></span> <input type="text" placeholder="请输入手机号/账号"> 
+                        </div>
+                        <div id="pwd">
+                            <span></span> <input type="password" placeholder="请输入密码"><a href="">忘记密码</a>
+                        </div>
+                    </div>
+                    <div id="login_btn">
+                        登录
+                    </div>
+                    <p>
+                        <span>
+                            <img src="./dist/img/newico2.png" alt="">
+                        </span>
+                        <span>
+                            手机快速注册
+                            <b>遇到问题?</b> 
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </body>
+
 </html>
