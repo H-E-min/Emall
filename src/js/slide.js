@@ -1,5 +1,6 @@
 window.onload= function() {
-    var box  = document.getElementById("all");  //   获得大盒子
+   //轮播
+	var box  = document.getElementById("all");  //   获得大盒子
     var ul = box.children[0].children[0];  // 获取ul
     var ulLis = ul.children;  //  ul 里面的所有  li
     // 复习：  cloneNode()     克隆节点       追加a.appendChild(b)  把b 放到a 的最后面
@@ -94,5 +95,4 @@ window.onload= function() {
             }
         },10);
     }
-
 }

@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="./dist/css/public.min.css">
     <link rel="stylesheet" href="./dist/css/index.min.css">
     <script src="./dist/js/jquery-1.12.4.min.js"></script>
+    <script src="./dist/js/jquery.cookie.min.js"></script>
     <script src="./dist/js/address-picker.min.js"></script>
-    <script src="./dist/js/index.min.js"></script>
+    <script src="./dist/js/slide.min.js"></script>
    
 </head>
 
@@ -43,8 +44,8 @@
                 <li><span></span>
                     <a href="">购物车(0)</a>
                 </li>
-                <li><a href="" class="res">[注册]</a></li>
-                <li><a href="" class="login">[登录]</a></li>
+                <li><a href="javascript:;" class="res">[注册]</a></li>
+                <li><a href="javascript:;" class="login">[登录]</a></li>
             </ul>
         </div>
     </div>
@@ -554,16 +555,16 @@
            <div id="login_box">
                  <div id="login_content">
                     <div id="login_title">
-                        <a href="">手机验证码登录</a>
+                        <a href="javascript:;" class="iphone">手机验证码登录</a>
                         <span>|</span>
-                        <a href="">账户登录</a>
+                        <a href="javascript:;" class="use">账户登录</a>
                     </div>
                     <div id="user_pwd">
                         <div id="user">
-                           <span></span> <input type="text" placeholder="请输入手机号/账号"> 
+                           <span></span> <input class="iphone_use" type="text" placeholder="请输入手机号/账号"> 
                         </div>
                         <div id="pwd">
-                            <span></span> <input type="password" placeholder="请输入密码"><a href="">忘记密码</a>
+                            <span></span> <input class="iphone_pwd" type="password" placeholder="请输入密码"><a href="" class="forget">忘记密码</a>
                         </div>
                     </div>
                     <div id="login_btn">
@@ -582,7 +583,43 @@
             </div>
         </div>
     </div>
-    
-</body>
 
+    <!-- register -->
+    <div id="shade_res">
+        <div id="login">
+           <div id="login_box">
+                 <div id="login_content">
+                    <div id="login_title">
+                        <a href="javascript:;" class="new_res">新用户注册</a>
+                        <span>|</span>
+                        <a href="javascript:;" class="new_login">直接登录</a>
+                    </div>
+                    <div id="user_pwd">
+                        <div id="user">
+                           <span></span> <input class="add_user" type="text" placeholder="请输入用户名"> 
+                        </div>
+                        <div id="pwd">
+                            <span></span>
+                            <input class="add_pwd" type="password" placeholder="请输入密码">
+                        </div>
+                    </div>
+                    <div id="res_btn">
+                        注册
+                    </div>
+                    <p>
+                        <span>
+                            我同意E宠《用户使用协议》
+                        </span>
+                        <span>
+                            <b>遇到问题?</b> 
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./dist/js/index.min.js"></script>
+    <script src="./dist/js/res.min.js"></script>
+    <script src="./dist/js/login.min.js"></script>
+</body>
 </html>
